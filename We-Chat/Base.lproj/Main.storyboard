@@ -1,26 +1,256 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wQP-Ay-LAK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Base Tab Bar Controller-->
+        <scene sceneID="W8P-Wg-cXo">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="wQP-Ay-LAK" customClass="BaseTabBarController" customModule="We_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="y2v-xt-3VQ"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="A0B-Eq-nHh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fUf-JT-lY7" kind="relationship" relationship="viewControllers" id="5jy-ib-Z2h"/>
+                        <segue destination="uMl-NB-VBg" kind="relationship" relationship="viewControllers" id="J1k-Pu-CeC"/>
+                        <segue destination="LFn-RK-pDn" kind="relationship" relationship="viewControllers" id="IJl-8u-Q6O"/>
+                        <segue destination="Vqv-ul-esn" kind="relationship" relationship="viewControllers" id="gvO-qB-xp7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Li-w0-RnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="-597"/>
+        </scene>
+        <!--微信-->
+        <scene sceneID="Dx0-Pb-dQ7">
+            <objects>
+                <navigationController id="fUf-JT-lY7" customClass="BaseNavgationController" customModule="We_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="微信" image="tabbar_message_center" selectedImage="tabbar_message_center_highlighted" id="nyd-nt-Vur"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oTJ-e6-xCf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="V69-4N-0li">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="CtW-0x-Fx5" kind="relationship" relationship="rootViewController" id="xph-nw-Fhm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K55-iF-9uT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1935" y="150"/>
+        </scene>
+        <!--微信-->
+        <scene sceneID="e5o-fc-eRE">
+            <objects>
+                <viewController id="CtW-0x-Fx5" customClass="ChatViewController" customModule="We_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="6XH-Ej-IBn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rhf-YX-hLt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="EO0-cI-r9Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-An-CNd">
+                                <rect key="frame" x="0.0" y="3" width="375" height="615"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="65" id="sTV-pE-dlN" customClass="ChatViewCell" customModule="We_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sTV-pE-dlN" id="ROZ-PE-UtO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_head_image" translatesAutoresizingMaskIntoConstraints="NO" id="CJc-Vc-b5l">
+                                                    <rect key="frame" x="8" y="7" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="44B-NS-Kb2"/>
+                                                        <constraint firstAttribute="width" constant="50" id="e4r-v2-dQj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAy-4q-zd8">
+                                                    <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3Y-H9-KQb">
+                                                    <rect key="frame" x="70" y="10" width="297" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdM-UG-and">
+                                                    <rect key="frame" x="70" y="37.5" width="297" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f3Y-H9-KQb" firstAttribute="top" secondItem="ROZ-PE-UtO" secondAttribute="top" constant="10" id="1Ek-8C-UQp"/>
+                                                <constraint firstAttribute="trailing" secondItem="VdM-UG-and" secondAttribute="trailing" constant="8" id="2Kp-x6-2o2"/>
+                                                <constraint firstItem="VdM-UG-and" firstAttribute="leading" secondItem="ROZ-PE-UtO" secondAttribute="leading" constant="70" id="79T-1r-ZXo"/>
+                                                <constraint firstItem="f3Y-H9-KQb" firstAttribute="leading" secondItem="ROZ-PE-UtO" secondAttribute="leading" constant="70" id="7ZY-iK-PYQ"/>
+                                                <constraint firstItem="CJc-Vc-b5l" firstAttribute="leading" secondItem="ROZ-PE-UtO" secondAttribute="leadingMargin" id="MlE-V2-e8t"/>
+                                                <constraint firstAttribute="trailing" secondItem="f3Y-H9-KQb" secondAttribute="trailing" constant="8" id="SK2-x9-sTW"/>
+                                                <constraint firstItem="CJc-Vc-b5l" firstAttribute="top" secondItem="ROZ-PE-UtO" secondAttribute="topMargin" constant="-1" id="ba0-Yb-i2P"/>
+                                                <constraint firstItem="VdM-UG-and" firstAttribute="top" secondItem="f3Y-H9-KQb" secondAttribute="bottom" constant="8" id="iFr-wN-B8o"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="VdM-UG-and" id="cxJ-In-lZN"/>
+                                            <outlet property="headerImage" destination="CJc-Vc-b5l" id="WS6-ov-Hey"/>
+                                            <outlet property="lineImageView" destination="XAy-4q-zd8" id="Ho2-ss-HFS"/>
+                                            <outlet property="nameLabel" destination="f3Y-H9-KQb" id="jEh-8a-iGw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="微信" id="tVY-h1-Jsf"/>
+                    <connections>
+                        <outlet property="ChatTableView" destination="yaF-An-CNd" id="P6f-5W-sCh"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2h-vr-NWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1935.2" y="1015.1424287856073"/>
+        </scene>
+        <!--通讯录-->
+        <scene sceneID="HpY-O7-z8K">
+            <objects>
+                <navigationController id="uMl-NB-VBg" customClass="BaseNavgationController" customModule="We_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="通讯录" image="tabbar_home" selectedImage="tabbar_home_highlighted" id="83l-nX-MJ9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6cL-sP-ild">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zNM-xM-Dle" kind="relationship" relationship="rootViewController" id="sQq-r5-ARd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Je-q6-Xeo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783" y="150"/>
+        </scene>
+        <!--通讯录-->
+        <scene sceneID="CCe-8a-o88">
+            <objects>
+                <viewController id="zNM-xM-Dle" customClass="AddressBookViewController" customModule="We_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H5h-dG-89q"/>
+                        <viewControllerLayoutGuide type="bottom" id="tG1-9y-6PS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zif-4f-dTk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="通讯录" id="0i4-tg-3LB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMJ-aI-bt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-865" y="1015"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="Kor-cp-wj8">
+            <objects>
+                <navigationController id="Vqv-ul-esn" customClass="BaseNavgationController" customModule="We_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我" image="tabbar_profile" selectedImage="tabbar_profile_highlighted" id="pCm-mo-IEV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VOU-Y7-ca9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lsr-YM-Fwi" kind="relationship" relationship="rootViewController" id="0Wu-ai-D7i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2B-Y7-hiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="161"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="GGj-y5-WRv">
+            <objects>
+                <navigationController id="LFn-RK-pDn" customClass="BaseNavgationController" customModule="We_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发现" image="tabbar_discover" selectedImage="tabbar_discover_highlighted" id="PST-Xd-g1w"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ukj-xD-Pfq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8mT-kl-0dF" kind="relationship" relationship="rootViewController" id="aND-Ya-MBX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjk-QA-A4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="132"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="yKK-i2-SF7">
+            <objects>
+                <viewController id="8mT-kl-0dF" customClass="DiscoverViewController" customModule="We_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E71-8x-tRu"/>
+                        <viewControllerLayoutGuide type="bottom" id="LO7-PR-bNU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="elX-QV-9PQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="发现" id="naI-wa-Afk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGS-6G-2yn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="1014"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="B3I-Ye-xhi">
+            <objects>
+                <viewController id="lsr-YM-Fwi" customClass="UserInfoViewController" customModule="We_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bsv-RZ-0gR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qlx-v6-0yl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UCD-h5-Fzo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我" id="1wv-dX-aFX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c67-00-0Qp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="1002"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="default_head_image" width="100" height="100"/>
+        <image name="tabbar_discover" width="30" height="30"/>
+        <image name="tabbar_discover_highlighted" width="30" height="30"/>
+        <image name="tabbar_home" width="30" height="30"/>
+        <image name="tabbar_home_highlighted" width="30" height="30"/>
+        <image name="tabbar_message_center" width="30" height="30"/>
+        <image name="tabbar_message_center_highlighted" width="30" height="30"/>
+        <image name="tabbar_profile" width="30" height="30"/>
+        <image name="tabbar_profile_highlighted" width="30" height="30"/>
+    </resources>
 </document>
