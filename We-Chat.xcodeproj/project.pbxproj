@@ -24,7 +24,14 @@
 		9A1E3C441F44435300F0EEB7 /* AddressBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E3C431F44435300F0EEB7 /* AddressBookViewController.swift */; };
 		9A1E3C461F44436500F0EEB7 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E3C451F44436500F0EEB7 /* DiscoverViewController.swift */; };
 		9A1E3C481F44437900F0EEB7 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E3C471F44437900F0EEB7 /* UserInfoViewController.swift */; };
+		9A32730E1F5FA39600A82063 /* CustomerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32730D1F5FA39600A82063 /* CustomerImageView.swift */; };
 		9A477B461F4AC5BC005D3964 /* CustomerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A477B451F4AC5BC005D3964 /* CustomerView.swift */; };
+		9A79DED51F5E85B2006881C7 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79DED41F5E85B2006881C7 /* PictureView.swift */; };
+		9A8F7B041F553EA3004A0D4E /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F7B021F553EA3004A0D4E /* DiscoverCell.swift */; };
+		9A8F7B051F553EA3004A0D4E /* DiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F7B031F553EA3004A0D4E /* DiscoverCell.xib */; };
+		9A8F7B071F55424C004A0D4E /* CustomerFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F7B061F55424C004A0D4E /* CustomerFlowLayout.swift */; };
+		9A8F7B091F5549F1004A0D4E /* DiscoverDetaillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F7B081F5549F1004A0D4E /* DiscoverDetaillController.swift */; };
+		9AAE4CFE1F57B3A700FAFD83 /* CustomerAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE4CFD1F57B3A700FAFD83 /* CustomerAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +54,14 @@
 		9A1E3C431F44435300F0EEB7 /* AddressBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookViewController.swift; sourceTree = "<group>"; };
 		9A1E3C451F44436500F0EEB7 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		9A1E3C471F44437900F0EEB7 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		9A32730D1F5FA39600A82063 /* CustomerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerImageView.swift; sourceTree = "<group>"; };
 		9A477B451F4AC5BC005D3964 /* CustomerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerView.swift; sourceTree = "<group>"; };
+		9A79DED41F5E85B2006881C7 /* PictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		9A8F7B021F553EA3004A0D4E /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
+		9A8F7B031F553EA3004A0D4E /* DiscoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverCell.xib; sourceTree = "<group>"; };
+		9A8F7B061F55424C004A0D4E /* CustomerFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerFlowLayout.swift; sourceTree = "<group>"; };
+		9A8F7B081F5549F1004A0D4E /* DiscoverDetaillController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverDetaillController.swift; sourceTree = "<group>"; };
+		9AAE4CFD1F57B3A700FAFD83 /* CustomerAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 		9A1667641F45303C00649FAA /* BaseViews */ = {
 			isa = PBXGroup;
 			children = (
+				9A8F7B011F553E75004A0D4E /* Discover */,
 				9A1667651F45306B00649FAA /* BaseTabBarItem.swift */,
 				9A1667671F4541CD00649FAA /* ChatViewCell.swift */,
 				9A16676C1F4592A800649FAA /* ChatDetailCell.swift */,
@@ -127,12 +142,42 @@
 		9A1E3C401F4442F700F0EEB7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9AAE4CFC1F57B35400FAFD83 /* User */,
+				9A8F7B001F553E63004A0D4E /* Discover */,
 				9A1667691F45864200649FAA /* Chat */,
 				9A1E3C431F44435300F0EEB7 /* AddressBookViewController.swift */,
-				9A1E3C451F44436500F0EEB7 /* DiscoverViewController.swift */,
-				9A1E3C471F44437900F0EEB7 /* UserInfoViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9A8F7B001F553E63004A0D4E /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				9A1E3C451F44436500F0EEB7 /* DiscoverViewController.swift */,
+				9A8F7B081F5549F1004A0D4E /* DiscoverDetaillController.swift */,
+				9A8F7B061F55424C004A0D4E /* CustomerFlowLayout.swift */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		9A8F7B011F553E75004A0D4E /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				9A8F7B021F553EA3004A0D4E /* DiscoverCell.swift */,
+				9A8F7B031F553EA3004A0D4E /* DiscoverCell.xib */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		9AAE4CFC1F57B35400FAFD83 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				9A1E3C471F44437900F0EEB7 /* UserInfoViewController.swift */,
+				9AAE4CFD1F57B3A700FAFD83 /* CustomerAnimationView.swift */,
+				9A79DED41F5E85B2006881C7 /* PictureView.swift */,
+				9A32730D1F5FA39600A82063 /* CustomerImageView.swift */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8F7B051F553EA3004A0D4E /* DiscoverCell.xib in Resources */,
 				9A1E3C321F44303E00F0EEB7 /* LaunchScreen.storyboard in Resources */,
 				9A1E3C2F1F44303E00F0EEB7 /* Assets.xcassets in Resources */,
 				9A1E3C2D1F44303E00F0EEB7 /* Main.storyboard in Resources */,
@@ -208,7 +254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8F7B091F5549F1004A0D4E /* DiscoverDetaillController.swift in Sources */,
 				9A1667661F45306B00649FAA /* BaseTabBarItem.swift in Sources */,
+				9A8F7B071F55424C004A0D4E /* CustomerFlowLayout.swift in Sources */,
 				9A1E3C441F44435300F0EEB7 /* AddressBookViewController.swift in Sources */,
 				9A16676D1F4592A800649FAA /* ChatDetailCell.swift in Sources */,
 				9A1E3C481F44437900F0EEB7 /* UserInfoViewController.swift in Sources */,
@@ -218,8 +266,12 @@
 				9A1E3C3F1F4442A900F0EEB7 /* BaseViewController.swift in Sources */,
 				9A1667681F4541CD00649FAA /* ChatViewCell.swift in Sources */,
 				9A1E3C281F44303E00F0EEB7 /* AppDelegate.swift in Sources */,
+				9AAE4CFE1F57B3A700FAFD83 /* CustomerAnimationView.swift in Sources */,
+				9A32730E1F5FA39600A82063 /* CustomerImageView.swift in Sources */,
 				9A16676F1F4592FD00649FAA /* ChatDetailRightCell.swift in Sources */,
 				9A1E3C421F44431900F0EEB7 /* ChatViewController.swift in Sources */,
+				9A79DED51F5E85B2006881C7 /* PictureView.swift in Sources */,
+				9A8F7B041F553EA3004A0D4E /* DiscoverCell.swift in Sources */,
 				9A1667711F459BC900649FAA /* BottomView.swift in Sources */,
 				9A1E3C3D1F44429300F0EEB7 /* BaseTabBarController.swift in Sources */,
 				9A16676B1F4586A100649FAA /* ChatDetaillViewController.swift in Sources */,

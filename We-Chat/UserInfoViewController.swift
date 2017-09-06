@@ -10,8 +10,16 @@ import UIKit
 
 class UserInfoViewController: BaseViewController {
 
+    private var myView : CustomerAnimationView!
+    private var pictueView : PictureView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        myView = CustomerAnimationView(frame:CGRect(x:(UIScreen.main.bounds.width - 200)/2,y:100,width:200,height:200))
+//        view.addSubview(myView)
+        
+        pictueView = PictureView(frame:CGRect(x:0,y:64,width:320,height:320))
+        view.addSubview(pictueView)
         // Do any additional setup after loading the view.
     }
 

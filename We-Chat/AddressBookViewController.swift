@@ -7,12 +7,32 @@
 //
 
 import UIKit
-
-class AddressBookViewController: BaseViewController {
+import ContactsUI
+class AddressBookViewController: BaseViewController,CNContactPickerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func addFirends(_ sender: UIBarButtonItem) {
+        let pickerVC = CNContactPickerViewController()
+        pickerVC.delegate = self
+        self.present(pickerVC, animated: true, completion: nil)
+    }
+
+   
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        print(contact.familyName + contact.givenName)
+        for i in contact.phoneNumbers {
+            
+            let phoneNum = i.value.stringValue //电话号码
+            print(phoneNum)
+        }
     }
 
     override func didReceiveMemoryWarning() {
